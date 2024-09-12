@@ -1,0 +1,31 @@
+void main() {
+  print("babi");
+
+  String pesan = "Kamu Mau Makan Babi?";
+
+  print(pesan);
+
+  String teks1 = "Selamat Pagi Babi!";
+
+  String teks2 = "Gimana Hrini Kbar nya babi?";
+
+  String teks3 = teks1 + " " + teks2;
+
+  print(teks3);
+
+  String teks4 = "$teks1 $teks2";
+
+  print(teks4);
+
+  int umur = 21;
+  double tinggi = 1.86;
+
+  print("Umur = $umur Tahun");
+  print("Tinggi = $tinggi Meter");
+
+  var angka = 100;
+  var nama = "Mas Rusdi";
+
+  print(angka.runtimeType);
+  print(nama.runtimeType);
+}
