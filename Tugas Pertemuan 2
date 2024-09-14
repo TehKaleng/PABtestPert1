@@ -1,0 +1,37 @@
+void main() {
+  // Membuat List berisi Map
+  List<Map<String, dynamic>> dataPegawai = [
+    {
+      "nama": "Syauqi",
+      "umur": 21,
+      "jabatan": "CEO",
+      "gaji": 150000000,
+    },
+    {
+      "nama": "Rio",
+      "umur": 20,
+      "jabatan": "Manager",
+      "gaji": 15000000,
+    },
+    {
+      "nama": "Jeremy",
+      "umur": 19,
+      "jabatan": "Supervisor",
+      "gaji": 10000000,
+    },
+    {
+      "nama": "Yeremia",
+      "umur": 19,
+      "jabatan": "Staff",
+      "gaji": 8000000,
+    }
+  ];
+
+  // Menampilkan data pegawai
+  for (var pegawai in dataPegawai) {
+    print("Nama: ${pegawai['nama']}");
+    print("Umur: ${pegawai['umur']}");
+    print("Jabatan: ${pegawai['jabatan']}");
+    print("Gaji: ${pegawai['gaji']}\n");
+  }
+}
