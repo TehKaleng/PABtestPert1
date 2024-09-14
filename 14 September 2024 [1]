@@ -1,0 +1,13 @@
+  List<int> numberList = [1, 2, 3, 4, 5];
+  var stringList = ['Hello', 'World', 'I', 'Love', 'You'];
+  
+  //Dinamic List
+  List dinamicList = ['Rajawali', 14, true];
+  
+  //Menampilkan List
+  for(int i = 0; i < numberList.length; i++){
+    print(numberList[i]);
+  }
+  
+  dinamicList.forEach((value) => print(value));
+}
