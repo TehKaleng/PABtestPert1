@@ -1,0 +1,42 @@
+class Produk {
+  
+  String namaProduk;
+  double harga;
+  int jumlah;
+  double diskon;
+
+  
+  Produk(this.namaProduk, this.harga, this.jumlah, this.diskon);
+
+  double hitungTotalHargaTanpaDiskon() {
+    return harga * jumlah;
+  }
+
+  double hitungTotalHargaSetelahDiskon() {
+    double totalHarga = hitungTotalHargaTanpaDiskon();
+    double potonganDiskon = totalHarga * (diskon / 100);
+    return totalHarga - potonganDiskon;
+  }
+
+  void tampilkanInformasiProduk() {
+    print('Nama Produk: $namaProduk');
+    print('Harga Satuan: Rp ${harga.toStringAsFixed(0)}');
+    print('Jumlah: $jumlah');
+    print('Diskon: ${diskon.toStringAsFixed(0)}%');
+    print('\nTotal Harga Tanpa Diskon: Rp ${hitungTotalHargaTanpaDiskon().toStringAsFixed(0)}');
+    print('Total Harga Setelah Diskon: Rp ${hitungTotalHargaSetelahDiskon().toStringAsFixed(0)}');
+  }
+}
+
+void main() {
+  Produk playstation = Produk('PS5', 7250000, 2, 12);
+  Produk handphone = Produk('Hp', 13500000, 1, 15);
+
+  playstation.tampilkanInformasiProduk();
+  print(" ");
+  handphone.tampilkanInformasiProduk();
+
+  double totalSemuaProdukSetelahDiskon = playstation.hitungTotalHargaSetelahDiskon() + handphone.hitungTotalHargaSetelahDiskon();
+
+  print("\nTotal Harga Semua Produk Setelah Diskon: Rp ${totalSemuaProdukSetelahDiskon.toStringAsFixed(0)}");
+}
