@@ -1,0 +1,32 @@
+void main() async {
+
+  /*getOrder(5).then((value){
+    print("your Order : $value");
+  }).catchError((error) {
+    print("Error $error");
+  }).whenComplete((){
+    print("Thank You!");
+  });*/
+
+try {
+  print("Waiting your Order");
+  var order = await getOrder(5);
+  print("Your Order is : $order");
+}catch(e) {
+  print("ERROR : $e");
+}
+
+  // print ("main() done");
+}
+
+Future<String> getOrder(int countOrder) {
+  return Future.delayed(Duration(seconds: 3), () {
+    // var isStockAvailable = false;
+    var stock = 2;
+    if (stock == countOrder) {
+      return "Coffee Boba";
+    } else {
+      throw "Our Stock is not enough";
+    }
+  });
+}
